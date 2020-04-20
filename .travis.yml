@@ -22,6 +22,7 @@ after_success:
   - docker push steinhafen/multi-worker
 
 deploy:
+  dege: true
   provider: elasticbeanstalk
   region: eu-central-1
   app: multi-docker
