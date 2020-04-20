@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t steinhafen/multi-client ./client
-  - dcoker build -t steinhafen/multi-niginx ./nginx
+  - docker build -t steinhafen/multi-nginx ./nginx
   - docker build -t steinhafen/multi-server ./server
   - docker build -t steinhafen/multi-worker ./worker
   # Log in to the docker CLI
