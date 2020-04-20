@@ -22,7 +22,6 @@ after_success:
   - docker push steinhafen/multi-worker
 
 deploy:
-  edge: true
   provider: elasticbeanstalk
   region: eu-central-1
   app: multi-docker
@@ -32,5 +31,6 @@ deploy:
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
 
